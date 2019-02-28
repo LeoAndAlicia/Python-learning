@@ -11,8 +11,8 @@
 * [Python操作MySQL数据库](#Python操作MySQL数据库)
 * [django初体验](#django初体验)
 * [Python-面向对象](#Python-面向对象)
-* [MySQL开发技巧（一）](#MySQL开发技巧（一）)
-* [python web开发在线教育平台](#pythonweb开发在线教育平台)
+* [MySQL开发技巧](#MySQL开发技巧)
+* [python-web开发在线教育平台](#python-web开发在线教育平台)
 
 ## Todo列表
 
@@ -22,7 +22,7 @@
 - [ ] **Python操作MySQL数据库**
 - [ ] **django初体验**
 - [ ] **Python-面向对象**
-- [ ] **MySQL开发技巧（一）**
+- [ ] **MySQL开发技巧**
 - [ ] **python web开发在线教育平台**
 
 ## 初识Python
@@ -62,11 +62,11 @@
 
 
 
-## MySQL开发技巧（一）
+## MySQL开发技巧
 
 
 
-## python web开发在线教育平台
+## python-web开发在线教育平台
 
 
 
