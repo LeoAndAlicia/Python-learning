@@ -12,7 +12,7 @@
 * [django初体验](#django初体验)
 * [Python-面向对象](#Python-面向对象)
 * [MySQL开发技巧（一）](#MySQL开发技巧（一）)
-* [python web开发在线教育平台](#python web开发在线教育平台)
+* [python web开发在线教育平台](#pythonweb开发在线教育平台)
 
 ## Todo列表
 
@@ -43,7 +43,7 @@
 
 - **付费**的课程教学，但质量相当高：[Python3入门+进阶课程][5]，此教程同样基于Python3.6版本。
 
-
+>**[返回目录](#目录)**
 
 
 ## django入门与实践
