@@ -1,10 +1,6 @@
 ﻿# Python-learning
 
-标签（空格分隔）： Python learning
-
----
-
-    这个存储库用来记录本人的Python学习过程
+>**这个存储库用来记录本人的Python学习过程:satisfied:**
 
 ---
 
