@@ -2,7 +2,6 @@
 
 >**这个存储库用来记录本人的Python学习过程:satisfied:**
 
----
 
 ## Todo列表
 
@@ -14,8 +13,6 @@
 - [ ] **Python-面向对象**
 - [ ] **MySQL开发技巧（一）**
 - [ ] **python web开发在线教育平台**
-
----
 
 ## 初识Python
 
@@ -37,31 +34,30 @@
 
 
 
----
 
 ## django入门与实践
 
----
+
 
 ## Python操作MySQL数据库
 
----
+
 
 ## django初体验
 
----
+
 
 ## Python-面向对象
 
----
+
 
 ## MySQL开发技巧（一）
 
----
+
 
 ## python web开发在线教育平台
 
----
+
 
 
   [1]: https://www.amazon.cn/%E5%9B%BE%E4%B9%A6/dp/B01ION3VWI/ref=sr_1_1?ie=UTF8&qid=1498793018&sr=8-1&keywords=python%20crash%20course
