@@ -20,5 +20,4 @@ def log(fn):
 def now():
     print('now')
 
-f = now()
-print(f)
+now()
