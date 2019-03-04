@@ -2,45 +2,35 @@
 # -*- coding: utf-8 -*-
 
 '''
-再思考一下能否写出一个@log的decorator，使它既支持：
-
-@log
-def f():
-    pass
-又支持：
-
-@log('execute')
-def f():
-    pass
+请把下面的Student对象的gender字段对外隐藏起来，
+用get_gender()和set_gender()代替，并检查参数有效性：
 '''
 
-import functools
-def log(text):
-	def decorator(fn):
-		@functools.wraps(fn)
-		def wrapper(*args,**kw):
-			if isinstance(text,(int,str)):
-				print('%s call %s' % (text,fn.__name__))
-			else :
-				print('call %s' % fn.__name__)
-			return fn(*args,**kw)
-		return wrapper
-	return decorator if isinstance(text,(int,str)) else decorator(text)
+class Student(object):
+    def __init__(self, name, gender):
+        self.name = name
+        self.__gender = gender
+
+    def get_gender(self):
+        return self.__gender
+
+    def set_gender(self,gender):
+        if gender == 'male' or 'female':
+            self.__gender = gender
+        else:
+            raise ValueError('bad gender')
+
+
+
 
 
 # 测试:
-@log
-def a():
-	print('a')
-
-@log('b')
-def b():
-	print('b')
-
-@log('c')
-def c():
-	print('c')
-
-a()
-b()
-c()
+bart = Student('Bart', 'male')
+if bart.get_gender() != 'male':
+    print('测试失败!')
+else:
+    bart.set_gender('female')
+    if bart.get_gender() != 'female':
+        print('测试失败!')
+    else:
+        print('测试成功!')
