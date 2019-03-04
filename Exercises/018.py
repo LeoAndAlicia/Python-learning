@@ -5,12 +5,23 @@
 
 '''
 
-import functools
+class Student(object):
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
 
-int2 = functools.partial(int, base=2)
+    def get_grade(self):
+        if self.score >= 90:
+            return 'A'
+        elif self.score >= 60:
+            return 'B'
+        else:
+            return 'C'
 
-print('1000000 =', int2('1000000'))
-print('1010101 =', int2('1010101'))
 
 
 # 测试:
+lisa = Student('Lisa', 99)
+bart = Student('Bart', 59)
+print(lisa.name, lisa.get_grade())
+print(bart.name, bart.get_grade())
