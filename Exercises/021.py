@@ -2,45 +2,34 @@
 # -*- coding: utf-8 -*-
 
 '''
-再思考一下能否写出一个@log的decorator，使它既支持：
 
-@log
-def f():
-    pass
-又支持：
-
-@log('execute')
-def f():
-    pass
 '''
 
-import functools
-def log(text):
-	def decorator(fn):
-		@functools.wraps(fn)
-		def wrapper(*args,**kw):
-			if isinstance(text,(int,str)):
-				print('%s call %s' % (text,fn.__name__))
-			else :
-				print('call %s' % fn.__name__)
-			return fn(*args,**kw)
-		return wrapper
-	return decorator if isinstance(text,(int,str)) else decorator(text)
+class MyObject(object):
+
+    def __init__(self):
+        self.x = 9
+
+    def power(self):
+        return self.x * self.x
+
+obj = MyObject()
+
+print('hasattr(obj, \'x\') =', hasattr(obj, 'x')) # 有属性'x'吗？
+print('hasattr(obj, \'y\') =', hasattr(obj, 'y')) # 有属性'y'吗？
+setattr(obj, 'y', 19) # 设置一个属性'y'
+print('hasattr(obj, \'y\') =', hasattr(obj, 'y')) # 有属性'y'吗？
+print('getattr(obj, \'y\') =', getattr(obj, 'y')) # 获取属性'y'
+print('obj.y =', obj.y) # 获取属性'y'
+
+print('getattr(obj, \'z\') =',getattr(obj, 'z', 404)) # 获取属性'z'，如果不存在，返回默认值404
+
+f = getattr(obj, 'power') # 获取属性'power'
+print(f)
+print(f())
+
+
+
 
 
 # 测试:
-@log
-def a():
-	print('a')
-
-@log('b')
-def b():
-	print('b')
-
-@log('c')
-def c():
-	print('c')
-
-a()
-b()
-c()
