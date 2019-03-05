@@ -2,31 +2,30 @@
 # -*- coding: utf-8 -*-
 
 '''
-为了统计学生人数，可以给Student类增加一个类属性，每创建一个实例，该属性自动增加：
+
 '''
 
 class Student(object):
-    count = 0
+    __slots__ = ('name', 'age') # 用tuple定义允许绑定的属性名称
 
-    def __init__(self, name):
-        self.name = name
-        Student.count += 1
+class GraduateStudent(Student):
+    pass
+
+s = Student() # 创建新的实例
+s.name = 'Michael' # 绑定属性'name'
+s.age = 25 # 绑定属性'age'
+# ERROR: AttributeError: 'Student' object has no attribute 'score'
+try:
+    s.score = 99
+except AttributeError as e:
+    print('AttributeError:', e)
+
+g = GraduateStudent()
+g.score = 99
+print('g.score =', g.score)
 
 
 
 
 
 # 测试:
-if Student.count != 0:
-    print('测试失败!')
-else:
-    bart = Student('Bart')
-    if Student.count != 1:
-        print('测试失败!')
-    else:
-        lisa = Student('Bart')
-        if Student.count != 2:
-            print('测试失败!')
-        else:
-            print('Students:', Student.count)
-            print('测试通过!')
