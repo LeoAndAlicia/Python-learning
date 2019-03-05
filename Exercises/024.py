@@ -2,30 +2,38 @@
 # -*- coding: utf-8 -*-
 
 '''
-
+请利用@property给一个Screen对象加上width和height属性，以及一个只读属性resolution：
 '''
 
-class Student(object):
-    __slots__ = ('name', 'age') # 用tuple定义允许绑定的属性名称
+class Screen(object):
+    @property
+    def width(self):
+        return self._width
 
-class GraduateStudent(Student):
-    pass
+    @width.setter
+    def width(self,value1):
+        self._width = value1
 
-s = Student() # 创建新的实例
-s.name = 'Michael' # 绑定属性'name'
-s.age = 25 # 绑定属性'age'
-# ERROR: AttributeError: 'Student' object has no attribute 'score'
-try:
-    s.score = 99
-except AttributeError as e:
-    print('AttributeError:', e)
+    @property
+    def height(self):
+        return self._height
 
-g = GraduateStudent()
-g.score = 99
-print('g.score =', g.score)
+    @height.setter
+    def height(self,value2):
+        self._height = value2
 
-
+    @property
+    def resolution(self):
+        return self._width * self._height
 
 
 
 # 测试:
+s = Screen()
+s.width = 1024
+s.height = 768
+print('resolution =', s.resolution)
+if s.resolution == 786432:
+    print('测试通过!')
+else:
+    print('测试失败!')
