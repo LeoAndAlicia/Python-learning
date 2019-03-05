@@ -2,38 +2,25 @@
 # -*- coding: utf-8 -*-
 
 '''
-请利用@property给一个Screen对象加上width和height属性，以及一个只读属性resolution：
+把Student的gender属性改造为枚举类型，可以避免使用字符串：
 '''
 
-class Screen(object):
-    @property
-    def width(self):
-        return self._width
+from enum import Enum, unique
+class Gender(Enum):
+    Male = 0
+    Female = 1
 
-    @width.setter
-    def width(self,value1):
-        self._width = value1
+class Student(object):
+    def __init__(self, name, gender):
+        self.name = name
+        self.gender = gender
 
-    @property
-    def height(self):
-        return self._height
-
-    @height.setter
-    def height(self,value2):
-        self._height = value2
-
-    @property
-    def resolution(self):
-        return self._width * self._height
 
 
 
 # 测试:
-s = Screen()
-s.width = 1024
-s.height = 768
-print('resolution =', s.resolution)
-if s.resolution == 786432:
+bart = Student('Bart', Gender.Male)
+if bart.gender == Gender.Male:
     print('测试通过!')
 else:
     print('测试失败!')
