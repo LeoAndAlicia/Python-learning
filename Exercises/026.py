@@ -8,7 +8,10 @@
 from functools import reduce
 
 def str2num(s):
-    return int(s)
+	if '.' in s:
+		return float(s)
+	else :
+		return int(s)
 
 def calc(exp):
     ss = exp.split('+')
