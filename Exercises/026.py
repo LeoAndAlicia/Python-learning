@@ -2,25 +2,28 @@
 # -*- coding: utf-8 -*-
 
 '''
-把Student的gender属性改造为枚举类型，可以避免使用字符串：
+运行下面的代码，根据异常信息进行分析，定位出错误源头，并修复：
 '''
 
-from enum import Enum, unique
-class Gender(Enum):
-    Male = 0
-    Female = 1
+from functools import reduce
 
-class Student(object):
-    def __init__(self, name, gender):
-        self.name = name
-        self.gender = gender
+def str2num(s):
+    return int(s)
+
+def calc(exp):
+    ss = exp.split('+')
+    ns = map(str2num, ss)
+    return reduce(lambda acc, x: acc + x, ns)
+
+def main():
+    r = calc('100 + 200 + 345')
+    print('100 + 200 + 345 =', r)
+    r = calc('99 + 88 + 7.6')
+    print('99 + 88 + 7.6 =', r)
+
+main()
 
 
 
 
 # 测试:
-bart = Student('Bart', Gender.Male)
-if bart.gender == Gender.Male:
-    print('测试通过!')
-else:
-    print('测试失败!')
