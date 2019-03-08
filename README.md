@@ -16,8 +16,8 @@
 
 ## Todo列表
 
-- [ ] **初识Python**
-  - [ ] 习题练习
+- [x] **初识Python**
+  - [x] 习题练习
 - [ ] **django入门与实践**
 - [ ] **Python操作MySQL数据库**
 - [ ] **django初体验**
