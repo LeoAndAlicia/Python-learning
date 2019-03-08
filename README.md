@@ -3,8 +3,7 @@
 >**这个存储库用来记录本人的Python学习过程:satisfied:**
 
 ## 目录
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-conda config --set show_channel_urls yes
+
 * [目录](#目录)
 * [Todo列表](#Todo列表)
 * [初识Python](#初识Python)
