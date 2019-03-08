@@ -8,8 +8,8 @@
 * [Todo列表](#Todo列表)
 * [初识Python](#初识Python)
 * [django入门与实践](#django入门与实践)
-* [Python操作MySQL数据库](#Python操作MySQL数据库)
 * [django初体验](#django初体验)
+* [Python操作MySQL数据库](#Python操作MySQL数据库)
 * [Python-面向对象](#Python-面向对象)
 * [MySQL开发技巧](#MySQL开发技巧)
 * [python-web开发在线教育平台](#python-web开发在线教育平台)
@@ -19,8 +19,8 @@
 - [x] **初识Python**
   - [x] 习题练习
 - [ ] **django入门与实践**
-- [ ] **Python操作MySQL数据库**
 - [ ] **django初体验**
+- [ ] **Python操作MySQL数据库**
 - [ ] **Python-面向对象**
 - [ ] **MySQL开发技巧**
 - [ ] **python web开发在线教育平台**
@@ -50,11 +50,11 @@
 
 
 
-## Python操作MySQL数据库
-
-
-
 ## django初体验
+
+
+
+## Python操作MySQL数据库
 
 
 
