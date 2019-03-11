@@ -50,6 +50,8 @@
 
 通过慕课网课程[django入门与实践][6]学习django的基础知识，并在新创建的库[Django][7]中记录自己的django学习过程。
 
+前置知识点：了解HTML语言([HTML+CSS基础教程][8])
+
 **[返回目录](#目录)**
 
 
@@ -78,3 +80,4 @@
   [5]: https://coding.imooc.com/class/136.html
   [6]: https://www.imooc.com/learn/790
   [7]: https://github.com/LeoAndAlicia/Django
+  [8]: https://www.imooc.com/learn/9
