@@ -8,7 +8,6 @@
 * [Todo列表](#Todo列表)
 * [初识Python](#初识Python)
 * [django入门与实践](#django入门与实践)
-* [django初体验](#django初体验)
 * [Python操作MySQL数据库](#Python操作MySQL数据库)
 * [Python-面向对象](#Python-面向对象)
 * [MySQL开发技巧](#MySQL开发技巧)
@@ -19,7 +18,6 @@
 - [x] **初识Python**
   - [x] 习题练习
 - [ ] **django入门与实践**
-- [ ] **django初体验**
 - [ ] **Python操作MySQL数据库**
 - [ ] **Python-面向对象**
 - [ ] **MySQL开发技巧**
@@ -50,9 +48,7 @@
 
 ## django入门与实践
 
-
-
-## django初体验
+通过慕课网课程[django入门与实践][6]学习django的基础知识，并在新创建的库[Django][7]中记录自己的django学习过程。
 
 
 
@@ -78,3 +74,5 @@
   [3]: https://www.amazon.cn/%E5%9B%BE%E7%81%B5%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E4%B8%9B%E4%B9%A6-Python%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E8%B5%AB%E7%89%B9%E5%85%B0/dp/B00KAFX65Q/ref=sr_1_1?ie=UTF8&qid=1508737548&sr=8-1&keywords=python%20novice
   [4]: https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000
   [5]: https://coding.imooc.com/class/136.html
+  [6]: https://www.imooc.com/learn/790
+  [7]: https://github.com/LeoAndAlicia/Django
