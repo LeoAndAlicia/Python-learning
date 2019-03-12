@@ -80,4 +80,4 @@
   [5]: https://coding.imooc.com/class/136.html
   [6]: https://www.imooc.com/learn/790
   [7]: https://github.com/LeoAndAlicia/Django
-  [8]: https://github.com/LeoAndAlicia/HTML-learning
+  [8]: https://www.imooc.com/code/291
