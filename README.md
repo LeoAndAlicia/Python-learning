@@ -17,7 +17,7 @@
 
 - [x] **初识Python**
   - [x] 习题练习
-- [ ] **django入门与实践**
+- [x] **django入门与实践**
   - [x] HTML+CSS基础学习
 - [ ] **Python操作MySQL数据库**
 - [ ] **Python-面向对象**
