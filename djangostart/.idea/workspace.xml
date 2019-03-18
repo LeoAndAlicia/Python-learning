@@ -102,9 +102,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="367" />
-    <option name="y" value="243" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="301" />
+    <option name="y" value="52" />
     <option name="width" value="1380" />
     <option name="height" value="1000" />
   </component>
@@ -230,11 +230,12 @@
       <workItem from="1552296617970" duration="4035000" />
       <workItem from="1552494708715" duration="624000" />
       <workItem from="1552920249378" duration="712000" />
+      <workItem from="1552922827491" duration="13000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16353000" />
+    <option name="totallyTimeSpent" value="16366000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -246,10 +247,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="241" y="42" width="1104" height="800" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26742628" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.38623327" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
