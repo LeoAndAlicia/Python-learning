@@ -2,17 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="103c439a-cf64-4da4-88d7-456636d0608e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/courses/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/courses/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operation/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operation/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/organization/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/organization/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/migrations/0002_banner_emailverifyrecord.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MyMooc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MyMooc.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyMooc/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyMooc/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/operation/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/organization/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/organization/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/organization/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/organization/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/organization/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/organization/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/organization/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/organization/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0002_banner_emailverifyrecord.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,29 +50,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyMooc/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="42" column="15" lean-forward="true" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
+            <state relative-caret-position="209">
+              <caret line="20" column="62" lean-forward="true" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
+              <folding>
+                <element signature="e#332#341#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/users/models.py">
+        <entry file="file://$PROJECT_DIR$/apps/users/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/courses/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state>
+              <caret selection-end-column="23" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
               </folding>
@@ -56,10 +75,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/organization/models.py">
+        <entry file="file://$PROJECT_DIR$/apps/courses/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="836">
-              <caret line="44" column="68" selection-start-line="44" selection-start-column="68" selection-end-line="44" selection-end-column="68" />
+            <state relative-caret-position="950">
+              <caret line="50" selection-start-line="50" selection-end-line="50" selection-end-column="104" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
               </folding>
@@ -68,10 +87,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/operation/models.py">
+        <entry file="file://$PROJECT_DIR$/apps/organization/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="50" column="15" lean-forward="true" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
+            <state relative-caret-position="950">
+              <caret line="50" column="15" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
+              <folding>
+                <element signature="e#24#63#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/operation/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
               <folding>
                 <element signature="e#25#64#0" expanded="true" />
               </folding>
@@ -82,7 +113,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.conda/envs/py36/Lib/site-packages/django/db/models/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
+            <state relative-caret-position="8189">
               <caret line="470" column="8" selection-start-line="470" selection-start-column="8" selection-end-line="470" selection-end-column="8" />
             </state>
           </provider>
@@ -94,6 +125,13 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -109,9 +147,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="331" />
-    <option name="y" value="12" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="313" />
+    <option name="y" value="20" />
     <option name="width" value="1380" />
     <option name="height" value="1005" />
   </component>
@@ -132,22 +170,7 @@
             <path>
               <item name="MyMooc" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyMooc" type="462c0819:PsiDirectoryNode" />
-              <item name="MyMooc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyMooc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyMooc" type="462c0819:PsiDirectoryNode" />
-              <item name="operation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyMooc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyMooc" type="462c0819:PsiDirectoryNode" />
-              <item name="organization" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyMooc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyMooc" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -160,6 +183,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../mx" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Work\Python-learning\MyMooc\apps" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -213,22 +241,24 @@
       <workItem from="1553149679777" duration="3208000" />
       <workItem from="1553171162619" duration="1201000" />
       <workItem from="1553245645606" duration="5346000" />
+      <workItem from="1553501908372" duration="2220000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11701000" />
+    <option name="totallyTimeSpent" value="13921000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="265" y="10" width="1104" height="804" extended-state="0" />
+    <frame x="251" y="16" width="1104" height="804" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985119" visible="true" weight="0.21032505" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985119" visible="true" weight="0.21414913" />
       <window_info id="Structure" order="1" sideWeight="0.5014881" side_tool="true" weight="0.21032505" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32985073" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39850748" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39732143" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -278,30 +308,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyMooc/urls.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$USER_HOME$/.conda/envs/py36/Lib/site-packages/django/db/models/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
+        <state relative-caret-position="8189">
           <caret line="470" column="8" selection-start-line="470" selection-start-column="8" selection-end-line="470" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/organization/models.py">
+    <entry file="file://$PROJECT_DIR$/MyMooc/urls.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/users/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="44" column="68" selection-start-line="44" selection-start-column="68" selection-end-line="44" selection-end-column="68" />
+        <state>
+          <caret selection-end-column="23" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/operation/models.py">
+    <entry file="file://$PROJECT_DIR$/apps/courses/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="50" column="15" lean-forward="true" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
+        <state relative-caret-position="950">
+          <caret line="50" selection-start-line="50" selection-end-line="50" selection-end-column="104" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/organization/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="50" column="15" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/operation/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
           <folding>
             <element signature="e#25#64#0" expanded="true" />
           </folding>
@@ -310,24 +360,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MyMooc/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="42" column="15" lean-forward="true" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/courses/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="209">
+          <caret line="20" column="62" lean-forward="true" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
           <folding>
-            <element signature="e#24#63#0" expanded="true" />
+            <element signature="e#332#341#0" expanded="true" />
           </folding>
         </state>
       </provider>
