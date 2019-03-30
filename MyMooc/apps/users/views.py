@@ -21,9 +21,9 @@ class ActiveUserView(View):
                 user = UserProfile.objects.get(email=email)
                 user.is_active = True
                 user.save()
-        else:
-            return render(request, "active_fail.html")
-        return render(request, "login.html")
+        # else:
+        #     return render(request, "active_fail.html")
+        return render(request, 'login.html')
 
 
 # 邮箱登入

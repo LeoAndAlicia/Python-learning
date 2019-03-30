@@ -28,7 +28,7 @@ urlpatterns = [
     url(r'^login/', LoginView.as_view(), name='login'),
     url(r'^register/', RegisterView.as_view(), name='register'),
     url(r'^captcha/', include('captcha.urls')),
-    url(r'^active/(?P<active_code>.*)$', ActiveUserView.as_view(), name='user_active'),
+    url(r'^active/(?P<active_code>.*)/$', ActiveUserView.as_view(), name='user_active'),
     url(r'^media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
 
 ]
