@@ -20,7 +20,7 @@ from django.views.static import serve
 from .settings import MEDIA_ROOT
 import xadmin
 
-from users.views import LoginView, RegisterView, ActiveUserView
+from users.views import LoginView, RegisterView, ActiveUserView, ForgetPwdView
 
 urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls),
@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^register/', RegisterView.as_view(), name='register'),
     url(r'^captcha/', include('captcha.urls')),
     url(r'^active/(?P<active_code>.*)/$', ActiveUserView.as_view(), name='user_active'),
+    url(r'^forget/', ForgetPwdView.as_view(), name='forget_pwd'),
     url(r'^media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
 
 ]
