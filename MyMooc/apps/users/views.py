@@ -7,7 +7,7 @@ from django.views.generic.base import View
 from django.contrib.auth.hashers import make_password
 
 from .models import UserProfile, EmailVerifyRecord
-from .forms import LoginForm, RegisterForm, ForgetForm
+from .forms import LoginForm, RegisterForm, ForgetForm, ModifyPwdForm
 from utils.email_send import send_register_email
 
 
@@ -21,6 +21,9 @@ class ActiveUserView(View):
                 user = UserProfile.objects.get(email=email)
                 user.is_active = True
                 user.save()
+            # 激活代码删除，激活链接失效
+            all_records.delete()
+
         else:
             return render(request, "active_fail.html")
         return render(request, 'login.html')
@@ -88,10 +91,62 @@ class LoginView(View):
             return render(request, 'login.html', {'login_form': login_form})
 
 
+# 用户忘记密码
 class ForgetPwdView(View):
     def get(self, request):
         forget_form = ForgetForm()
         return render(request, 'forgetpwd.html', {'forget_form': forget_form})
 
+    def post(self, request):
+        forget_form = ForgetForm(request.POST)
+        if forget_form.is_valid():
+            email = request.POST.get('email', '')
+            send_register_email(email, 'forget')
+            return render(request, 'send_success.html')
 
+        else:
+            return render(request, 'forgetpwd.html', {'forget_form': forget_form})
+
+
+# 用户重置密码请求
+class ResetView(View):
+    def get(self, request, active_code):
+        all_records = EmailVerifyRecord.objects.filter(code=active_code)
+        if all_records:
+            for record in all_records:
+                email = record.email
+                return render(request, 'password_reset.html', {'email': email})
+
+        else:
+            return render(request, "active_fail.html")
+        return render(request, 'login.html')
+
+
+# 用户重置密码执行
+class ModifyPwdView(View):
+    def post(self, request):
+        modify_form = ModifyPwdForm(request.POST)
+        if modify_form.is_valid():
+            pwd = request.POST.get('password', '')
+            pwd1 = request.POST.get('password1', '')
+            pwd2 = request.POST.get('password2', '')
+            email = request.POST.get('email', '')
+            if UserProfile.objects.filter(password=pwd):
+                if pwd1 != pwd2:
+                    return render(request, 'password_reset.html', {'email': email, 'msg': '密码不一致!'})
+                user = UserProfile.objects.get(email=email)
+                # 把密码明文加密
+                user.password = make_password(pwd2)
+                # 保存
+                user.save()
+                # 激活代码删除，修改密码链接失效
+                del_obj = EmailVerifyRecord.objects.filter(email=email)
+                del_obj.delete()
+                return render(request, 'login.html')
+            else:
+                return render(request, 'password_reset.html', {'email': email, 'msg': '原密码不正确!'})
+
+        else:
+            email = request.POST.get('email', '')
+            return render(request, 'password_reset.html', {'email': email, 'modify_form': modify_form})
 
