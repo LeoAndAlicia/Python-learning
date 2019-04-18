@@ -10,6 +10,7 @@ class CityDictAdmin(object):
     list_display = ['name', 'desc', 'add_time']
     search_fields = ['name', 'desc']
     list_filter = ['name', 'desc', 'add_time']
+    model_icon = 'fa fa-university'
 
 
 class CourseOrgAdmin(object):
@@ -19,6 +20,9 @@ class CourseOrgAdmin(object):
                      'course_nums']
     list_filter = ['name', 'desc', 'click_nums', 'fav_nums', 'tag', 'category', 'address', 'city__name', 'students',
                    'course_nums', 'add_time']
+    relfield_style = 'fk-ajax'
+    style_fields = {"desc": "ueditor"}
+    model_icon = 'fa fa-university'
 
 
 class TeacherAdmin(object):
@@ -28,6 +32,7 @@ class TeacherAdmin(object):
                      'age']
     list_filter = ['org__name', 'name', 'work_years', 'work_company', 'work_position', 'points', 'click_nums',
                    'fav_nums', 'age', 'add_time']
+    model_icon = 'fa fa-user-md'
 
 
 xadmin.site.register(CityDict, CityDictAdmin)

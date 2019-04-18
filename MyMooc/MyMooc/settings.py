@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'captcha',
     'pure_pagination',
+    'DjangoUeditor',
 ]
 AUTH_USER_MODEL = 'users.UserProfile'
 
@@ -144,7 +145,7 @@ USE_TZ = False
 # static文件地址配置
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, "static"),
     os.path.join(BASE_DIR, 'media'),
 )
 
@@ -160,3 +161,5 @@ EMAIL_HOST_USER = 'leosdjango@sina.com'
 EMAIL_HOST_PASSWORD = '6edvv8jGa2vmRMe'
 EMAIL_USE_TLS = False
 EMAIL_FROM = 'leosdjango@sina.com'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static1')

@@ -1,16 +1,18 @@
 {% extends 'base.html' %}
+{% block title %}课程机构列表 - MyMOOC在线网{% endblock %}
 {% load staticfiles %}
-{% block title %}课程机构列表 - MyMOOC{% endblock %}
 {% block custom_bread %}
-<section>
-    <div class="wp">
-        <ul  class="crumbs">
-            <li><a href="{% url 'index' %}">首页</a>></li>
-            <li>课程机构</li>
-        </ul>
-    </div>
-</section>
+    <section>
+        <div class="wp">
+            <ul  class="crumbs">
+                <li><a href="/">首页</a>></li>
+                <li>课程机构</li>
+            </ul>
+        </div>
+    </section>
 {% endblock %}
+
+
 {% block content %}
 <section>
 	<div class="wp butler_list_box list">
@@ -35,8 +37,8 @@
 					<div class="more">更多</div>
 					<div class="cont">
                         <a href="?ct={{ category }}"><span class="{% ifequal city_id '' %}active2{% endifequal %}">全部</span></a>
-                            {% for city in all_cities %}
-                                <a href="?city={{ city.id }}&ct={{ category }}"><span class="{% ifequal city_id city.id|stringformat:'i' %}active2{% endifequal %}">{{ city.name }}</span></a>
+                            {% for city in all_citys %}
+                                <a href="?city={{ city.id }}&ct={{ category }}"><span class="{% ifequal city_id city.id|stringformat:"i" %}active2{% endifequal %}">{{ city.name }}</span></a>
                             {% endfor %}
 					</div>
 				</li>
@@ -55,13 +57,13 @@
             {% for course_org in all_orgs.object_list %}
                 <dl class="des difdes">
                     <dt>
-                        <a href="org-detail-homepage.html">
+                        <a href="{% url 'org:org_home' course_org.id %}">
                             <img width="200" height="120" class="scrollLoading" data-url="{{ MEDIA_URL }}{{ course_org.image }}"/>
                         </a>
                     </dt>
                     <dd>
                         <div class="clearfix">
-                             <a href="org-detail-homepage.html">
+                             <a href="{% url 'org:org_home' course_org.id %}">
                                  <h1>{{ course_org.name }}</h1>
                                  <div class="pic fl">
 
@@ -87,27 +89,28 @@
                     <div class="buy start_groupbuy jsShowPerfect2" data-id="22"><br/>联系<br/>服务</div>
                 </dl>
             {% endfor %}
-
 		</div>
 		 <div class="pageturn">
             <ul class="pagelist">
                 {% if all_orgs.has_previous %}
                     <li class="long"><a href="?{{ all_orgs.previous_page_number.querystring }}">上一页</a></li>
                 {% endif %}
+
                 {% for page in all_orgs.pages %}
                     {% if page %}
                         {% ifequal page all_orgs.number %}
-                             <li class="active"><a href="?{{ page.querystring }}">{{ page }}</a></li>
+                            <li class="active"><a href="?{{ page.querystring }}">{{ page }}</a></li>
                         {% else %}
                             <li><a href="?{{ page.querystring }}" class="page">{{ page }}</a></li>
                         {% endifequal %}
                     {% else %}
-                        <li class="none"><a href="">...</a> </li>
+                        <li class="none"><a href="">...</a></li>
                     {% endif %}
                 {% endfor %}
                 {% if all_orgs.has_next %}
                     <li class="long"><a href="?{{ all_orgs.next_page_number.querystring }}">下一页</a></li>
                 {% endif %}
+
             </ul>
         </div>
 		</div>
@@ -129,12 +132,13 @@
                 </div>
                 <p class="error company-tips" id="jsCompanyTips"></p>
 				<input class="btn" type="text" id="jsStayBtn" value="立即咨询 >" />
-                {% csrf_token %}
+            {% csrf_token %}
             </form>
 		</div>
 
 		<div class="right companyrank layout">
 			<div class="head">授课机构排名</div>
+
             {% for curent_org in hot_orgs %}
                 <dl class="des">
                     <dt class="num fl">{{ forloop.counter }}</dt>
@@ -144,6 +148,9 @@
                     </dd>
                 </dl>
             {% endfor %}
+
+
+
 		</div>
         </div>
 </section>
@@ -162,7 +169,6 @@
                 success: function(data) {
                     if(data.status == 'success'){
                         $('#jsStayForm')[0].reset();
-                        $('#jsCompanyTips').hide();
                         alert("提交成功")
                     }else if(data.status == 'fail'){
                         $('#jsCompanyTips').html(data.msg)

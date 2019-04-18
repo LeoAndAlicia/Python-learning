@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
-	<title>MyMOOC</title>
+	<title>MyMOOC首页</title>
 	<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
 </head>
@@ -47,7 +47,7 @@
 <header>
     <div class="c-box fff-box">
         <div class="wp header-box">
-            <p class="fl hd-tips">Mymooc，在线学习平台！</p>
+            <p class="fl hd-tips">MyMOOC，在线学习平台！</p>
             <ul class="fr hd-bar">
                 <li>服务电话：<span>33333333</span></li>
                 <li><a href="{% url 'login' %}">[登录]</a></li>
@@ -60,7 +60,7 @@
     <div class="c-box bg-box">
         <div class="login-box clearfix">
             <div class="hd-login clearfix">
-                <a class="index-logo" href="{% url 'index' %}"></a>
+                <a class="index-logo" href="/"></a>
                 <h1>忘记密码</h1>
                 <a class="index-font" href="{% url 'index' %}">回到首页</a>
             </div>
@@ -82,15 +82,15 @@
                         <label>帐&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号</label>
                         <input type="text" id="account" name="email" value="{{ forget_form.email.value }}" placeholder="邮箱" />
                     </div>
-                    <div class="form-group captcha1 marb38 {% if forget_form.errors.captcha %}errorput{% endif %}">
+                    <div class="form-group captcha1 marb38">
                         <label>验&nbsp;证&nbsp;码</label>
                         {{ forget_form.captcha }}
                     </div>
-                    <div class="error btns" id="jsForgetTips">{% for key, error in forget_form.errors.items %}{{ error }}{% endfor %}{{ msg }}</div>
+                    <div class="error btns" id="jsForgetTips">{% for key,error in forget_form.errors.items %}{{ error }}{% endfor %}{{ msg }}</div>
                     <input type="hidden" name="sms_type" value="1">
                     <input class="btn btn-green" id="jsFindPwdBtn" type="submit" value="提交" />
                     <p class="form-p" style="bottom:40px;">您还可以<a href="{% url 'login' %}"> [直接登录]</a></p>
-                    {% csrf_token %}
+                {% csrf_token %}
                 </form>
             </div>
         </div>
