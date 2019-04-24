@@ -14,9 +14,15 @@ from utils.mixin_utils import LoginRequiredMixin
 
 class CourseListView(View):
     def get(self, request):
+
         all_courses = Course.objects.all().order_by("-add_time")
 
         hot_courses = Course.objects.all().order_by("-click_nums")[:3]
+
+        #  类别筛选
+        category = request.GET.get('ct', "")
+        if category:
+            all_courses = all_courses.filter(category=category)
 
         # 课程搜索
         search_keywords = request.GET.get('keywords', "")
@@ -43,9 +49,10 @@ class CourseListView(View):
         courses = p.page(page)
 
         return render(request, 'course-list.html', {
-            "all_courses":courses,
-            "sort":sort,
-            "hot_courses":hot_courses
+            "all_courses": courses,
+            "sort": sort,
+            "hot_courses": hot_courses,
+            "category": category
         })
 
 

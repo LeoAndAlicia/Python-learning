@@ -31,7 +31,7 @@
                         {% if request.user.is_authenticated %}
                         <div class="personal">
                             <dl class="user fr">
-                                <dd>{{ user.username }}<img class="down fr" src="{% static "/static/images/top_down.png" %}"/></dd>
+                                <dd>{{ user.username }}<img class="down fr" src="{% static "/images/top_down.png" %}"/></dd>
                                 <dt><img width="20" height="20" src="{{ MEDIA_URL }}{{ request.user.image }}"/></dt>
                             </dl>
                             <div class="userdetail">
@@ -87,10 +87,10 @@
 	<div class="wp list personal_list">
 	<div class="left">
         <ul>
-            <li class="active2"><a href="{% url 'users:user_info' %}">个人资料</a></li>
-            <li ><a href="{% url 'users:mycourse' %}">我的课程</a></li>
-            <li ><a href="{% url 'users:myfav_org' %}">我的收藏</a></li>
-            <li >
+            <li class="{% ifequal current_page 'home' %}active2{% endifequal %}"><a href="{% url 'users:user_info' %}">个人资料</a></li>
+            <li class="{% ifequal current_page 'mycourse' %}active2{% endifequal %}"><a href="{% url 'users:mycourse' %}">我的课程</a></li>
+            <li class="{% if current_page == 'myfavorg' or current_page == 'myfavteacher' or current_page == 'myfavcourse' %}active2{% endif %}"><a href="{% url 'users:myfav_org' %}">我的收藏</a></li>
+            <li class="{% ifequal current_page 'mymessage' %}active2{% endifequal %}">
                 <a href="{% url 'users:mymessage' %}" style="position: relative;">
                     我的消息
                 </a>

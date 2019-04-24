@@ -16,13 +16,17 @@ class Course(models.Model):
                           filePath="courses/ueditor/", default='')
     is_banner = models.BooleanField(default=False, verbose_name=u"是否轮播")
     teacher = models.ForeignKey(Teacher, verbose_name=u"讲师", null=True, blank=True)
-    degree = models.CharField(verbose_name=u"难度", choices=(("cj", "初级"), ("zj" ,"中级"), ("gj" ,"高级")), max_length=2)
+    degree = models.CharField(verbose_name=u"难度", choices=(("cj", "初级"), ("zj", "中级"), ("gj", "高级")), max_length=2)
     learn_times = models.IntegerField(default=0, verbose_name=u"学习时长(分钟数)")
     students = models.IntegerField(default=0, verbose_name=u'学习人数')
     fav_nums = models.IntegerField(default=0, verbose_name=u'收藏人数')
     image = models.ImageField(upload_to="courses/%Y/%m", verbose_name=u"封面图", max_length=100)
     click_nums = models.IntegerField(default=0, verbose_name=u"点击数")
-    category = models.CharField(default=u"后端开发", max_length=20, verbose_name=u"课程类别")
+    category = models.CharField(default=u"计算机", choices=(('jsj', '计算机'), ('jjx', '经济学'), ('gl', '管理'), ('ky', '考研'),
+                                                ('lgbx', '理工补习'), ('slj', '四六级'), ('xlx', '心理学'), ('wy', '外语'),
+                                                ('wxwh', '文学文化'), ('yssj', '艺术设计'), ('ls', '历史'), ('zx', '哲学'),
+                                                ('fx', '法学'), ('gx', '工学'), ('lx', '理学'), ('yyws', '医药卫生'),
+                                                ('nlyy', '农林园艺')), max_length=20, verbose_name=u"课程类别")
     tag = models.CharField(default="", verbose_name=u"课程标签", max_length=10)
     youneed_know = models.CharField(default="", max_length=300, verbose_name=u"课程须知")
     teacher_tell = models.CharField(default="", max_length=300, verbose_name=u"老师告诉你")
@@ -103,3 +107,4 @@ class CourseResource(models.Model):
     class Meta:
         verbose_name = u"课程资源"
         verbose_name_plural = verbose_name
+

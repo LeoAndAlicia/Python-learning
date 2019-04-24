@@ -176,8 +176,11 @@ class ModifyPwdView(View):
 
 # 用户个人信息
 class UserinfoView(LoginRequiredMixin, View): 
-    def get(self, request): 
-        return render(request, 'usercenter-info.html', {})
+    def get(self, request):
+        current_page = "home"
+        return render(request, 'usercenter-info.html', {
+            'current_page': current_page
+        })
 
     def post(self, request): 
         user_info_form = UserInfoForm(request.POST, instance=request.user)
@@ -247,16 +250,19 @@ class UpdateEmailView(LoginRequiredMixin, View):
 
 # 我的课程
 class MyCourseView(LoginRequiredMixin, View): 
-    def get(self, request): 
+    def get(self, request):
+        current_page = 'mycourse'
         user_courses = UserCourse.objects.filter(user=request.user)
         return render(request, 'usercenter-mycourse.html', {
-            "user_courses": user_courses
+            "user_courses": user_courses,
+            'current_page': current_page
         })
 
 
 # 我收藏的课程机构
 class MyFavOrgView(LoginRequiredMixin, View): 
-    def get(self, request): 
+    def get(self, request):
+        current_page = 'myfavorg'
         org_list = []
         fav_orgs = UserFavorite.objects.filter(user=request.user, fav_type=2)
         for fav_org in fav_orgs: 
@@ -264,13 +270,15 @@ class MyFavOrgView(LoginRequiredMixin, View):
             org = CourseOrg.objects.get(id=org_id)
             org_list.append(org)
         return render(request, 'usercenter-fav-org.html', {
-            "org_list": org_list
+            "org_list": org_list,
+            'current_page': current_page
         })
 
 
 # 我收藏的授课讲师
 class MyFavTeacherView(LoginRequiredMixin, View): 
-    def get(self, request): 
+    def get(self, request):
+        current_page = 'myfavteacher'
         teacher_list = []
         fav_teachers = UserFavorite.objects.filter(user=request.user, fav_type=3)
         for fav_teacher in fav_teachers: 
@@ -278,13 +286,15 @@ class MyFavTeacherView(LoginRequiredMixin, View):
             teacher = Teacher.objects.get(id=teacher_id)
             teacher_list.append(teacher)
         return render(request, 'usercenter-fav-teacher.html', {
-            "teacher_list": teacher_list
+            "teacher_list": teacher_list,
+            'current_page': current_page
         })
 
 
 # 我收藏的课程
 class MyFavCourseView(LoginRequiredMixin, View): 
-    def get(self, request): 
+    def get(self, request):
+        current_page = 'myfavcourse'
         course_list = []
         fav_courses = UserFavorite.objects.filter(user=request.user, fav_type=1)
         for fav_course in fav_courses: 
@@ -292,13 +302,15 @@ class MyFavCourseView(LoginRequiredMixin, View):
             teacher = Course.objects.get(id=course_id)
             course_list.append(teacher)
         return render(request, 'usercenter-fav-course.html', {
-            "course_list": course_list
+            "course_list": course_list,
+            'current_page': current_page
         })
 
 
 # 我的消息
 class MymessageView(LoginRequiredMixin, View): 
-    def get(self, request): 
+    def get(self, request):
+        current_page = 'mymessage'
         all_messages = UserMessage.objects.filter(user=request.user.id)
 
         # 用户进入个人消息后清空未读消息的记录
@@ -317,7 +329,8 @@ class MymessageView(LoginRequiredMixin, View):
 
         messages = p.page(page)
         return render(request, 'usercenter-message.html', {
-            "messages": messages
+            "messages": messages,
+            'current_page': current_page
         })
 
 

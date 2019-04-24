@@ -14,24 +14,18 @@ class CityDictAdmin(object):
 
 
 class CourseOrgAdmin(object):
-    list_display = ['name', 'desc', 'click_nums', 'fav_nums', 'tag', 'category', 'address', 'city', 'students',
-                    'course_nums', 'add_time']
-    search_fields = ['name', 'desc', 'click_nums', 'fav_nums' 'tag', 'category', 'address', 'city', 'students',
-                     'course_nums']
-    list_filter = ['name', 'desc', 'click_nums', 'fav_nums', 'tag', 'category', 'address', 'city__name', 'students',
-                   'course_nums', 'add_time']
+    list_display = ['name', 'desc', 'click_nums', 'fav_nums']
+    search_fields = ['name', 'desc', 'click_nums', 'fav_nums']
+    list_filter = ['name', 'desc', 'click_nums', 'fav_nums']
     relfield_style = 'fk-ajax'
-    style_fields = {"desc": "ueditor"}
+    style_fields = {"desc":"ueditor"}
     model_icon = 'fa fa-university'
 
 
 class TeacherAdmin(object):
-    list_display = ['org', 'name', 'work_years', 'work_company', 'work_position', 'points', 'click_nums', 'fav_nums',
-                    'age', 'add_time']
-    search_fields = ['org', 'name', 'work_years', 'work_company', 'work_position', 'points', 'click_nums', 'fav_nums',
-                     'age']
-    list_filter = ['org__name', 'name', 'work_years', 'work_company', 'work_position', 'points', 'click_nums',
-                   'fav_nums', 'age', 'add_time']
+    list_display = ['org', 'name', 'work_years', 'work_company']
+    search_fields = ['org', 'name', 'work_years', 'work_company']
+    list_filter = ['org', 'name', 'work_years', 'work_company']
     model_icon = 'fa fa-user-md'
 
 
