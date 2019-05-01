@@ -105,7 +105,7 @@ class LoginView(View):
             if user is not None: 
                 if user.is_active: 
                     login(request, user)
-                    return render(request, 'index.html')
+                    return HttpResponseRedirect(reverse("index"))
                 else: 
                     return render(request, 'login.html', {'msg':  '用户名未激活!'})
             else: 
@@ -149,29 +149,21 @@ class ResetView(View):
 class ModifyPwdView(View): 
     def post(self, request): 
         modify_form = ModifyPwdForm(request.POST)
-        if modify_form.is_valid(): 
-            pwd = request.POST.get('password', '')
+        if modify_form.is_valid():
             pwd1 = request.POST.get('password1', '')
             pwd2 = request.POST.get('password2', '')
             email = request.POST.get('email', '')
-            if UserProfile.objects.filter(password=pwd): 
-                if pwd1 != pwd2: 
-                    return render(request, 'password_reset.html', {'email':  email, 'msg':  '密码不一致!'})
-                user = UserProfile.objects.get(email=email)
-                # 把密码明文加密
-                user.password = make_password(pwd2)
-                # 保存
-                user.save()
-                # 激活代码删除，修改密码链接失效
-                del_obj = EmailVerifyRecord.objects.filter(email=email)
-                del_obj.delete()
-                return render(request, 'login.html')
-            else: 
-                return render(request, 'password_reset.html', {'email':  email, 'msg':  '原密码不正确!'})
-
-        else: 
-            email = request.POST.get('email', '')
-            return render(request, 'password_reset.html', {'email':  email, 'modify_form':  modify_form})
+            if pwd1 != pwd2:
+                return render(request, 'password_reset.html', {'email':  email, 'msg':  '密码不一致!'})
+            user = UserProfile.objects.get(email=email)
+            # 把密码明文加密
+            user.password = make_password(pwd2)
+            # 保存
+            user.save()
+            # 激活代码删除，修改密码链接失效
+            del_obj = EmailVerifyRecord.objects.filter(email=email)
+            del_obj.delete()
+            return render(request, 'login.html')
 
 
 # 用户个人信息

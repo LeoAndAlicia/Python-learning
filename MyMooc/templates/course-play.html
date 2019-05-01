@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="IE=edge" >
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+<title>{{ video.name }} - MyMOOC在线网</title>
+<link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.8.1/skins/default/aliplayer-min.css" />
+<script type="text/javascript" charset="utf-8" src="https://g.alicdn.com/de/prismplayer/2.8.1/aliplayer-min.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://player.alicdn.com/aliplayer/presentation/js/aliplayercomponents.min.js"></script>
+</head>
+<body>
+<div class="prism-player" id="player-con">
+<script>
+var player = new Aliplayer({
+  "id": "player-con",
+  "source": "{{ video.url }}",
+  "width": "100%",
+  "height": "675px",
+  "margin-left": "40px",
+  "autoplay": true,
+  "isLive": false,
+  "rePlay": false,
+  "playsinline": true,
+  "preload": true,
+  "controlBarVisibility": "hover",
+  "useH5Prism": true,
+  components: [{
+  	  name: 'PlaylistComponent',
+      type: AliPlayerComponent.PlaylistComponent,
+      args: [[{
+        name: '{{ video.name }}',
+        source: 'http://pqiv318i3.bkt.clouddn.com/32551461-1-16.mp4'
+      }, {
+        name: '{{ video.name }}',
+        source: 'http://pqiv318i3.bkt.clouddn.com/32551461-1-16.mp4'
+      }, {
+        name: '{{ video.name }}',
+        source: 'http://pqiv318i3.bkt.clouddn.com/32551461-1-16.mp4'
+      }, {
+        name: '{{ video.name }}',
+        source: 'http://pqiv318i3.bkt.clouddn.com/32551461-1-16.mp4'
+      }]]
+	},
+	{
+	  name: 'MemoryPlayComponent',
+	  type: AliPlayerComponent.MemoryPlayComponent,}
+	]
+}, function (player) {
+    player._switchLevel = 0;
+    console.log("播放器创建了。");
+  }
+);
+</script>
+</body>

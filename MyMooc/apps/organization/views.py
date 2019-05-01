@@ -234,6 +234,7 @@ class TeacherListView(View):
     def get(self, request):
         all_teachers = Teacher.objects.all()
 
+
         # 课程讲师搜索
         search_keywords = request.GET.get('keywords', "")
         if search_keywords:
@@ -254,13 +255,16 @@ class TeacherListView(View):
         except PageNotAnInteger:
             page = 1
 
-        p = Paginator(all_teachers, 1, request=request)
+        p = Paginator(all_teachers, 2, request=request)
 
         teachers = p.page(page)
+        teachers_nums = all_teachers.count()
+
         return render(request, "teachers-list.html", {
             "all_teachers": teachers,
             "sorted_teacher": sorted_teacher,
             "sort": sort,
+            "teachers_nums": teachers_nums
         })
 
 
