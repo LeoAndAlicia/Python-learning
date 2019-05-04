@@ -22,3 +22,6 @@ class UserAskForm(forms.ModelForm):
             return mobile
         else:
             raise forms.ValidationError(u"手机号码非法", code="mobile_invalid")
+
+
+
