@@ -48,7 +48,7 @@ class BaseSetting(object):
 class GlobalSettings(object):
     site_title = "MyMOOC"
     site_footer = "Leo&Aca"
-    # menu_style = "accordion"
+    menu_style = "accordion"
 
 
 class EmailVerifyRecordAdmin(object):
