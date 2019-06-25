@@ -1,7 +1,9 @@
 """
-输入年份 如果是闰年输出True 否则输出False
+寻找“水仙花数”。
 """
-year = int(input('请输入年份: '))
-is_leap = (year % 4 == 0 and year % 100 != 0 or
-           year % 400 == 0)
-print(is_leap)
+for x in range(100,1000):
+    a = int(str(x)[0])
+    b = int(str(x)[1])
+    c = int(str(x)[2])
+    if x == (a ** 3 + b ** 3 +c ** 3):
+        print(x)
