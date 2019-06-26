@@ -1,8 +1,11 @@
 """
-百钱百鸡
+生成斐波那契数列
 """
-for x in range(0,20):
-	for y in range(0,33):
-		z=100-x-y
-		if 5*x+3*y+z/3 == 100 and x != 0 and y != 0 and z != 0:
-			print(x, y , z)
+def fibo(num):
+    numlist = [0 ,1]
+    for x in range(num - 2):
+        numlist.append(numlist[-2] + numlist[-1])
+    print(numlist)
+
+if __name__ == "__main__":
+    fibo(10)
