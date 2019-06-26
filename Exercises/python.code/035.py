@@ -1,11 +1,13 @@
 """
-生成斐波那契数列
+实现计算求最大公约数和最小公倍数的函数
 """
-def fibo(num):
-    numlist = [0 ,1]
-    for x in range(num - 2):
-        numlist.append(numlist[-2] + numlist[-1])
-    print(numlist)
+def gcd(x, y):
+    if x > y:
+        x , y = y, x
+    for factor in range(x , 0 , -1):
+        if x % factor == 0 and y % factor == 0:
+            return factor
 
-if __name__ == "__main__":
-    fibo(10)
+
+def lcm(x, y):
+    return x * y // gcd(x, y)
