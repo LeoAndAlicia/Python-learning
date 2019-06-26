@@ -1,17 +1,8 @@
 """
-寻找“完美数”
+百钱百鸡
 """
-import math
-def main():
-	for num in range(1,10000):
-		sum = 0
-		for factor in range(1, int(math.sqrt(num))+1):
-			if num % factor == 0:
-				sum += factor
-				if (factor > 1) and (num / factor != factor):
-					sum += num / factor
-		if num != 1 and sum == num:
-			print(num)
-
-if __name__ == "__main__":
-	main()
+for x in range(0,20):
+	for y in range(0,33):
+		z=100-x-y
+		if 5*x+3*y+z/3 == 100 and x != 0 and y != 0 and z != 0:
+			print(x, y , z)
