@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 输入年份 如果是闰年输出True 否则输出False
 """
