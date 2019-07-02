@@ -1,5 +1,5 @@
-int x=0, sum=0
-for x in xrange(1,100):
+x, sum = 0, 0
+for x in range(1,101):
 	if x%2==0:
 		sum = sum + x
-print("sum=%d",x)
+print("sum=%d" % sum)
